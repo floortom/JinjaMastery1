@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jinja Mastery vol 1</title>
+</head>
+<body>
+    {% set numTodos = todos | length %}
+    {% if numTodos > 0 %}
+        <p>You have {{ numTodos }} things to do today.</p>
+        <ul>
+        {% for todo in todos %}
+            <li>{{ todo }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nothing to do today. Relax!</p>
+    {% endif %}
+</body>
+</html>
