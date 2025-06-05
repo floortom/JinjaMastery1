@@ -1,12 +1,7 @@
+{% extends "base.html" %}
 {% from "macros.jinja2" import todo_list %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Jinja Mastery vol 1</title>
-</head>
-<body>
+{% block content %}
     {% set numTodos = todos | length %}
     {% if numTodos > 0 %}
         <p>You have {{ numTodos }} things to do today.</p>
@@ -14,5 +9,4 @@
     {% else %}
         <p>Nothing to do today. Relax!</p>
     {% endif %}
-</body>
-</html>
+{% endblock %}
