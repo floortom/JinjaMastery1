@@ -1,11 +1,10 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+<h1>{{ text }}</h1>
 
-{% block content %}
-    <h1>{{ text }}</h1>
-
-    {% if completed %}
-        <p>You've completed this todo!</p>
-    {% else %}
-        <p>You haven't completed this yet. Why not do it now?</p>
-    {% endif %}
-{% endblock %}
+{% if completed %}
+<p class="todo todo--completed">You've completed this todo!</p>
+{% else %}
+<p class="todo todo--pending">
+  You haven't completed this yet. Why not do it now?
+</p>
+{% endif %} {% endblock %}
