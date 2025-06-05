@@ -1,3 +1,5 @@
+{% from "macros.jinja2" import todo_list %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +10,7 @@
     {% set numTodos = todos | length %}
     {% if numTodos > 0 %}
         <p>You have {{ numTodos }} things to do today.</p>
-        <ul>
-        {% for todo in todos %}
-            <li>{{ todo }}</li>
-        {% endfor %}
-        </ul>
+        {{ todo_list(todos) }}
     {% else %}
         <p>Nothing to do today. Relax!</p>
     {% endif %}

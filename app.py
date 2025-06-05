@@ -3,8 +3,8 @@ from flask import Flask, render_template
 def create_app():
     app = Flask(__name__)
 
-    todos = ["Talk to Lene",
-             "Get home safely"
+    todos = [("Talk to Lene", False),
+             ("Get home safely", True)
              ]
     # todos = []
 
